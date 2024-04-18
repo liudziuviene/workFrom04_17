@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "12897beb-8f91-4896-a8b8-02ade6181447",
+		"name": "School API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34376547"
+	},
+	"item": [
+		{
+			"name": "get all schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get school by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get students by school id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools/5/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools",
+						"5",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get student by id and school id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools/5/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools",
+						"5",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
