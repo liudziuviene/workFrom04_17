@@ -4,11 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@ToString
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class Student {
 

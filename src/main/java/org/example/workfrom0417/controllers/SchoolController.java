@@ -2,6 +2,7 @@ package org.example.workfrom0417.controllers;
 
 import lombok.AllArgsConstructor;
 
+import lombok.RequiredArgsConstructor;
 import org.example.workfrom0417.entities.School;
 import org.example.workfrom0417.entities.Student;
 import org.example.workfrom0417.services.SchoolService;
@@ -14,10 +15,10 @@ import java.util.Optional;
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/schools")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SchoolController {
 
-    private SchoolService schoolService;
+    private final SchoolService schoolService;
 
     @GetMapping
     public List<School> getAllSchools() {
