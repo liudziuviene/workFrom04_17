@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "12897beb-8f91-4896-a8b8-02ade6181447",
+		"name": "School API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34376547"
+	},
+	"item": [
+		{
+			"name": "get all schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all schools",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/schools",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"schools"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Apr 2024 20:47:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Greenwood High\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Sunrise Academy\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Oakwood School\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Riverdale High\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Maplewood College\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get school by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get school by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/schools/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"schools",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Apr 2024 12:02:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"title\": \"Riverdale High\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get students by school id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools/5/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools",
+						"5",
+						"students"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get students by school id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/schools/5/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"schools",
+								"5",
+								"students"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Apr 2024 12:02:57 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"John\",\n        \"surname\": \"Doe\",\n        \"school\": {\n            \"id\": 5,\n            \"title\": \"Maplewood College\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Jane\",\n        \"surname\": \"Smith\",\n        \"school\": {\n            \"id\": 5,\n            \"title\": \"Maplewood College\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Michael\",\n        \"surname\": \"Johnson\",\n        \"school\": {\n            \"id\": 5,\n            \"title\": \"Maplewood College\"\n        }\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Emily\",\n        \"surname\": \"Williams\",\n        \"school\": {\n            \"id\": 5,\n            \"title\": \"Maplewood College\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"name\": \"David\",\n        \"surname\": \"Brown\",\n        \"school\": {\n            \"id\": 5,\n            \"title\": \"Maplewood College\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get student by id and school id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schools/5/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schools",
+						"5",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get student by id and school id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/schools/5/students/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"schools",
+								"5",
+								"students",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Apr 2024 12:03:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"school\": {\n        \"id\": 5,\n        \"title\": \"Maplewood College\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
