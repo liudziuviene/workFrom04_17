@@ -3,6 +3,12 @@ package org.example.workfrom0417.controllers;
 import lombok.AllArgsConstructor;
 
 import lombok.RequiredArgsConstructor;
+import org.example.workfrom0417.converters.SchoolConverter;
+import org.example.workfrom0417.converters.StudentConverter;
+import org.example.workfrom0417.dto.CreateSchoolDTO;
+import org.example.workfrom0417.dto.CreateStudentDTO;
+import org.example.workfrom0417.dto.SchoolDTO;
+import org.example.workfrom0417.dto.UpdateSchoolTitleDTO;
 import org.example.workfrom0417.entities.School;
 import org.example.workfrom0417.entities.Student;
 import org.example.workfrom0417.services.SchoolService;
@@ -39,5 +45,23 @@ public class SchoolController {
     public Student getStudentByIdAndSchoolId(@PathVariable Long schoolId, @PathVariable Long studentId) {
         Optional<Student> student = this.schoolService.getStudentByIdAndSchoolId(schoolId, studentId);
         return student.orElse(null);
+    }
+
+    @PostMapping
+    public SchoolDTO addSchool(@RequestBody CreateSchoolDTO createSchoolDTO) {
+        return SchoolConverter.convertEntityToDTO(this.schoolService.addSchool(SchoolConverter.convertCreateSchoolDTOToEntity(createSchoolDTO)));
+    }
+
+    @PostMapping("/{schoolId}/students")
+    public SchoolDTO addStudentBySchoolId(@PathVariable Long schoolId, @RequestBody CreateStudentDTO createStudentDTO) {
+        Student student = StudentConverter.convertCreateStudentDTOToEntity(createStudentDTO);
+        School school = this.schoolService.addStudentBySchoolId(student, schoolId);
+        return SchoolConverter.convertEntityToDTO(school);
+    }
+
+    @PatchMapping("/{schoolId}/title")
+    public SchoolDTO updateSchoolTitleById(@PathVariable Long schoolId, @RequestBody UpdateSchoolTitleDTO updateSchoolTitleDTO) {
+        School updatedSchool = this.schoolService.updateSchoolTitleById(schoolId, updateSchoolTitleDTO.getTitle());
+        return SchoolConverter.convertEntityToDTO(updatedSchool);
     }
 }
