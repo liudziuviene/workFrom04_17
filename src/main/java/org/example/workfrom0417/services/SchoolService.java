@@ -8,6 +8,7 @@ import org.example.workfrom0417.repositories.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 
@@ -32,5 +33,26 @@ public class SchoolService {
 
     public Optional<Student> getStudentByIdAndSchoolId(Long schoolId, Long studentId) {
         return studentRepository.findByIdAndSchoolId(studentId, schoolId);
+    }
+
+    public School addSchool(School school) {
+        return this.schoolRepository.saveAndFlush(school);
+    }
+
+    public School addStudentBySchoolId(Student student, Long schoolId) {
+        School school = this.schoolRepository.findById(schoolId)
+                .orElseThrow(() -> new NoSuchElementException("School not found"));
+
+        student.setSchool(school);
+        school.getStudentList().add(student);
+        return this.schoolRepository.saveAndFlush(school);
+    }
+
+    public School updateSchoolTitleById(Long schoolId, String newTitle) {
+        School school = this.schoolRepository.findById(schoolId)
+                .orElseThrow(() -> new NoSuchElementException("School not found"));
+
+        school.setTitle(newTitle);
+        return this.schoolRepository.saveAndFlush(school);
     }
 }

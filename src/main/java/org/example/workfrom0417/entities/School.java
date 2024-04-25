@@ -17,6 +17,10 @@ public class School {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
+    private String address;
+    private int numberOfStudents;
+    private int numberOfTeachers;
+    private int numberOfClasses;
 
     @JsonIgnore
     @OneToMany(mappedBy = "school", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
