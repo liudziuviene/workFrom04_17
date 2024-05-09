@@ -1,6 +1,6 @@
-package org.example.workfrom0417.repositories;
+package org.example.workfrom0417.task1and2.repositories;
 
-import org.example.workfrom0417.entities.Student;
+import org.example.workfrom0417.task1and2.entities.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.stereotype.Repository;

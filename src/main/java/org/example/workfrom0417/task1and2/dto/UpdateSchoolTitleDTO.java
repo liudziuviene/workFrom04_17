@@ -1,4 +1,4 @@
-package org.example.workfrom0417.dto;
+package org.example.workfrom0417.task1and2.dto;
 
 import lombok.Data;
 
