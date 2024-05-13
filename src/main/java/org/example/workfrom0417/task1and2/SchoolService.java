@@ -1,10 +1,10 @@
-package org.example.workfrom0417.services;
+package org.example.workfrom0417.task1and2;
 
 import lombok.RequiredArgsConstructor;
-import org.example.workfrom0417.entities.School;
-import org.example.workfrom0417.entities.Student;
-import org.example.workfrom0417.repositories.SchoolRepository;
-import org.example.workfrom0417.repositories.StudentRepository;
+import org.example.workfrom0417.task1and2.repositories.SchoolRepository;
+import org.example.workfrom0417.task1and2.repositories.StudentRepository;
+import org.example.workfrom0417.task1and2.entities.School;
+import org.example.workfrom0417.task1and2.entities.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

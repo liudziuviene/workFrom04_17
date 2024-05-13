@@ -1,8 +1,8 @@
-package org.example.workfrom0417.converters;
+package org.example.workfrom0417.task1and2.converters;
 
-import org.example.workfrom0417.dto.CreateSchoolDTO;
-import org.example.workfrom0417.dto.SchoolDTO;
-import org.example.workfrom0417.entities.School;
+import org.example.workfrom0417.task1and2.dto.CreateSchoolDTO;
+import org.example.workfrom0417.task1and2.dto.SchoolDTO;
+import org.example.workfrom0417.task1and2.entities.School;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,17 +20,17 @@ public class SchoolConverter {
         return schoolDTO;
     }
 
-    public static List<SchoolDTO> convertEntityListToDTOList(List<School> schools) {
-
-        List<SchoolDTO> schoolDTOList = null;
-        if (schools != null && !schools.isEmpty()) {
-            schoolDTOList = new ArrayList<>();
-            for (School school : schools) {
-                schoolDTOList.add(convertEntityToDTO(school));
-            }
-        }
-        return schoolDTOList;
-    }
+//    public static List<SchoolDTO> convertEntityListToDTOList(List<School> schools) {
+//
+//        List<SchoolDTO> schoolDTOList = null;
+//        if (schools != null && !schools.isEmpty()) {
+//            schoolDTOList = new ArrayList<>();
+//            for (School school : schools) {
+//                schoolDTOList.add(convertEntityToDTO(school));
+//            }
+//        }
+//        return schoolDTOList;
+//    }
 
     public static School convertCreateSchoolDTOToEntity(CreateSchoolDTO createSchoolDTO) {
         School school = null;

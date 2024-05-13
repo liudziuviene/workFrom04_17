@@ -1,8 +1,8 @@
-package org.example.workfrom0417.converters;
+package org.example.workfrom0417.task1and2.converters;
 
-import org.example.workfrom0417.dto.CreateStudentDTO;
-import org.example.workfrom0417.dto.StudentDTO;
-import org.example.workfrom0417.entities.Student;
+import org.example.workfrom0417.task1and2.dto.CreateStudentDTO;
+import org.example.workfrom0417.task1and2.dto.StudentDTO;
+import org.example.workfrom0417.task1and2.entities.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,17 +20,17 @@ public class StudentConverter {
         return studentDTO;
     }
 
-    public static List<StudentDTO> convertEntityListToDTOList(List<Student> students) {
-
-        List<StudentDTO> studentDTOList = null;
-        if (students != null && !students.isEmpty()) {
-            studentDTOList = new ArrayList<>();
-            for (Student student : students) {
-                studentDTOList.add(convertEntityToDTO(student));
-            }
-        }
-        return studentDTOList;
-    }
+//    public static List<StudentDTO> convertEntityListToDTOList(List<Student> students) {
+//
+//        List<StudentDTO> studentDTOList = null;
+//        if (students != null && !students.isEmpty()) {
+//            studentDTOList = new ArrayList<>();
+//            for (Student student : students) {
+//                studentDTOList.add(convertEntityToDTO(student));
+//            }
+//        }
+//        return studentDTOList;
+//    }
 
     public static Student convertCreateStudentDTOToEntity(CreateStudentDTO createStudentDTO) {
         Student student = null;
