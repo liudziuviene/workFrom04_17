@@ -22,20 +22,9 @@ public class School {
     private int numberOfTeachers;
     private int numberOfClasses;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "school", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    List<Student> studentList = new ArrayList<>();
 
-    @Override
-    public String toString() {
-        return "School{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", address='" + address + '\'' +
-                ", numberOfStudents=" + numberOfStudents +
-                ", numberOfTeachers=" + numberOfTeachers +
-                ", numberOfClasses=" + numberOfClasses +
-                ", studentList=" + studentList +
-                '}';
-    }
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "school_id")
+    private List<Student> students = new ArrayList<>();
+
 }

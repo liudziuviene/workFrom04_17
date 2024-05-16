@@ -19,21 +19,4 @@ public class Student {
     private String address;
     private String birthDate;
 
-    @ManyToOne
-    @JoinColumn(name = "school_id")
-    private School school;
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", address='" + address + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", school=" + school +
-                '}';
-    }
 }

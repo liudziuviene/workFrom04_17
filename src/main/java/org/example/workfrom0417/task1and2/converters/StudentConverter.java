@@ -20,17 +20,17 @@ public class StudentConverter {
         return studentDTO;
     }
 
-//    public static List<StudentDTO> convertEntityListToDTOList(List<Student> students) {
-//
-//        List<StudentDTO> studentDTOList = null;
-//        if (students != null && !students.isEmpty()) {
-//            studentDTOList = new ArrayList<>();
-//            for (Student student : students) {
-//                studentDTOList.add(convertEntityToDTO(student));
-//            }
-//        }
-//        return studentDTOList;
-//    }
+    public static List<StudentDTO> convertEntityListToDTOList(List<Student> students) {
+
+        List<StudentDTO> studentDTOList = null;
+        if (students != null && !students.isEmpty()) {
+            studentDTOList = new ArrayList<>();
+            for (Student student : students) {
+                studentDTOList.add(convertEntityToDTO(student));
+            }
+        }
+        return studentDTOList;
+    }
 
     public static Student convertCreateStudentDTOToEntity(CreateStudentDTO createStudentDTO) {
         Student student = null;
