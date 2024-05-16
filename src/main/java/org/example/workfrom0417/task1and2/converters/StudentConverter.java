@@ -7,7 +7,10 @@ import org.example.workfrom0417.task1and2.entities.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentConverter {
+public abstract class StudentConverter {
+
+    public StudentConverter() {
+    }
 
     public static StudentDTO convertEntityToDTO(Student student) {
         StudentDTO studentDTO = null;
@@ -20,17 +23,17 @@ public class StudentConverter {
         return studentDTO;
     }
 
-//    public static List<StudentDTO> convertEntityListToDTOList(List<Student> students) {
-//
-//        List<StudentDTO> studentDTOList = null;
-//        if (students != null && !students.isEmpty()) {
-//            studentDTOList = new ArrayList<>();
-//            for (Student student : students) {
-//                studentDTOList.add(convertEntityToDTO(student));
-//            }
-//        }
-//        return studentDTOList;
-//    }
+    public static List<StudentDTO> convertEntityListToDTOList(List<Student> students) {
+
+        List<StudentDTO> studentDTOList = null;
+        if (students != null && !students.isEmpty()) {
+            studentDTOList = new ArrayList<>();
+            for (Student student : students) {
+                studentDTOList.add(convertEntityToDTO(student));
+            }
+        }
+        return studentDTOList;
+    }
 
     public static Student convertCreateStudentDTOToEntity(CreateStudentDTO createStudentDTO) {
         Student student = null;

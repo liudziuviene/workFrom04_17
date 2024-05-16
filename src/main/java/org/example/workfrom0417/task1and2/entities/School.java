@@ -1,6 +1,5 @@
 package org.example.workfrom0417.task1and2.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,9 +21,10 @@ public class School {
     private int numberOfTeachers;
     private int numberOfClasses;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "school", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    List<Student> studentList = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "school_id")
+    private List<Student> students = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -35,7 +35,7 @@ public class School {
                 ", numberOfStudents=" + numberOfStudents +
                 ", numberOfTeachers=" + numberOfTeachers +
                 ", numberOfClasses=" + numberOfClasses +
-                ", studentList=" + studentList +
+                ", students=" + students +
                 '}';
     }
 }
